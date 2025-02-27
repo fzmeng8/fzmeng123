@@ -1,14 +1,17 @@
 package ui;
 
 import javax.swing.*;
+import java.util.Random;
 
 public class GameJFrame extends JFrame {
+    int[][] data = new int[4][4];
     public GameJFrame() {
         // 初始化界面
         initJFrame();
         // 初始化菜单
         initJMenuBar();
-
+        //
+        initData();
         //
         initImage();
         this.setVisible(true);
@@ -55,19 +58,37 @@ public class GameJFrame extends JFrame {
         // 把菜单放进界面中
         this.setJMenuBar(JMenuBar);
     }
+    private void initData(){
+        // 定义一个一维数组
+        int[] tempArr = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+        // 遍历数组，找到每一个元素，拿着每一个元素跟速记索引上的数据进行交换
+        Random rand = new Random();
+        for (int i = 0; i < tempArr.length; i++) {
+            // 获取随机索引
+            int index = rand.nextInt(tempArr.length);
+            // 拿着遍历到的每一个数据，跟随机索引进行交换
+            int temp = tempArr[i];
+            tempArr[i] = tempArr[index];
+            tempArr[index] = temp;
+        }
+
+        for (int i = 0; i < tempArr.length; i++) {
+            data[i / 4][i % 4] = tempArr[i];
+        }
+    }
     private void initImage(){
 
         for (int i = 0; i < 4; i++) {
-            int number = 1;
             for (int j = 0; j < 4; j++) {
+                // 获取当前要加载图片的序号
+                int num = data[i][j];
                 // 创建JLabel的对象 （管理容器）
-                JLabel jLabel = new JLabel(new ImageIcon("E:\\JavaDevelop\\javademo\\puzzlegame\\image\\animal\\"+ number +".png"));
+                JLabel jLabel = new JLabel(new ImageIcon("../image/animal/" + num + ".png"));
                 // 指定图片位置
                 jLabel.setBounds(105 * i,105 * j,105,105);
                 // 把管理容器添加到界面中
                 this.getContentPane().add(jLabel);
                 // 下一次加载后面的图片
-                number++;
             }
         }
     }
