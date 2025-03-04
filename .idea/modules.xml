@@ -3,12 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Demo/Demo.iml" filepath="$PROJECT_DIR$/Demo/Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HellowordSQL/HellowordSQL.iml" filepath="$PROJECT_DIR$/HellowordSQL/HellowordSQL.iml" />
       <module fileurl="file://$PROJECT_DIR$/MathDemo/MathDemo.iml" filepath="$PROJECT_DIR$/MathDemo/MathDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/javademo.iml" filepath="$PROJECT_DIR$/javademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/jigsawgame/jigsawgame.iml" filepath="$PROJECT_DIR$/jigsawgame/jigsawgame.iml" />
       <module fileurl="file://$PROJECT_DIR$/oopDemo/oopDemo.iml" filepath="$PROJECT_DIR$/oopDemo/oopDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/puzzlegame/puzzlegame.iml" filepath="$PROJECT_DIR$/puzzlegame/puzzlegame.iml" />
       <module fileurl="file://$PROJECT_DIR$/stringdemo/stringdemo.iml" filepath="$PROJECT_DIR$/stringdemo/stringdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webDemo/webDemo.iml" filepath="$PROJECT_DIR$/webDemo/webDemo.iml" />
     </modules>
   </component>
 </project>
