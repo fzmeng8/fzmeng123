@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="lombok">
+  <library name="mybatis-3.5.17">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/HellowordSQL/lib/lombok.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HellowordSQL/lib/mybatis-3.5.17.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Demo/Demo.iml" filepath="$PROJECT_DIR$/Demo/Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/HellowordSQL/HellowordSQL.iml" filepath="$PROJECT_DIR$/HellowordSQL/HellowordSQL.iml" />
       <module fileurl="file://$PROJECT_DIR$/MathDemo/MathDemo.iml" filepath="$PROJECT_DIR$/MathDemo/MathDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyBatisDemo/MyBatisDemo.iml" filepath="$PROJECT_DIR$/MyBatisDemo/MyBatisDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/javademo.iml" filepath="$PROJECT_DIR$/javademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/jigsawgame/jigsawgame.iml" filepath="$PROJECT_DIR$/jigsawgame/jigsawgame.iml" />
       <module fileurl="file://$PROJECT_DIR$/oopDemo/oopDemo.iml" filepath="$PROJECT_DIR$/oopDemo/oopDemo.iml" />
