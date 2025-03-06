@@ -2,22 +2,31 @@ package com.test.mapper;
 
 import com.test.entity.Student;
 import com.test.entity.Teacher;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
 public interface TestMapper {
-    // MyBatis 使用"动态代理" 机制来拦截 TestMapper 接口的方法调用，并自动执行 SQL 语句。
-    // TestMapper 只是一个接口，没有具体的实现，但是 MyBatis 代理类会拦截 selectStudent() 方法：
-    // 代理对象 发现 selectStudent() 方法被调用。
-    // 在 TestMapper.xml 中查找 id="selectStudent" 的 SQL 语句：
-    // 执行 SQL：SELECT * FROM study.student
-    // 返回 List<Student>，并自动将查询结果映射到 Student 对象。
-    List<Student> selectStudent();
-    Student selectStudentById(int sid);
-    void insertStudent(Student student);
-    void updateStudent(Student student);
-    void deleteStudent(int sid);
+    @Insert("insert into student values (#{sid}, #{name}, #{sex})")
+    int addStudent(Student student);
 
-    Teacher getTeacherById(int sid);
+    @Select("select * from student where sid = #{sid}")
+    Student getStudentBySid(int sid);
 
+
+    @Results({
+            @Result(column = "tid", property = "tid"),
+            @Result(column = "name", property = "name"),
+            @Result(column = "tid", property = "studentList", many =
+                @Many(select = "getStudentByTid")),
+
+    })
+    @Select("select * from teacher where tid = #{tid}")
+    Teacher getTeacherByTid(int tid);
+
+    @Select("select * from student inner join teach on student.sid = teach.sid where tid = #{tid}")
+    List<Student> getStudentByTid(int tid);
+
+    @Select("select * from teacher inner join teach on teacher.tid = teach.tid where sid = #{sid}")
+    Teacher getTeacherBySid(int sid);
 }
