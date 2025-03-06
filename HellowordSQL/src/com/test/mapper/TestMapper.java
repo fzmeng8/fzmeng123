@@ -1,6 +1,7 @@
 package com.test.mapper;
 
 import com.test.entity.Student;
+import com.test.entity.Teacher;
 
 import java.util.List;
 
@@ -12,4 +13,11 @@ public interface TestMapper {
     // 执行 SQL：SELECT * FROM study.student
     // 返回 List<Student>，并自动将查询结果映射到 Student 对象。
     List<Student> selectStudent();
+    Student selectStudentById(int sid);
+    void insertStudent(Student student);
+    void updateStudent(Student student);
+    void deleteStudent(int sid);
+
+    Teacher getTeacherById(int sid);
+
 }
